@@ -43,7 +43,7 @@
   .lead-xl .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
   /* logo */
-  .logos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:10px}
+  .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px}
   .logobox{border-radius:20px;border:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:center;min-height:200px}
   .logobox.light{background:#fff}
   .logobox.dark{background:var(--ink);border-color:transparent}
@@ -123,6 +123,7 @@
     <div class="logos">
       <div><div class="logobox light"><img src="logo.png" alt="Primary logo"></div><div class="cap">Primary · on light / cream</div></div>
       <div><div class="logobox dark"><img src="logo-white.png" alt="Reversed logo"></div><div class="cap">Reversed · on ink / dark</div></div>
+      <div><div class="logobox grad"><svg viewBox="0 0 240 240" style="width:116px;height:116px" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M70 140 Q120 122 170 140"/><path d="M70 140 C72 172 92 191 120 191 C148 191 168 172 170 140"/><path d="M106 195 Q120 201 134 195"/><path d="M120 174 C111 163 99 161 99 150 C99 144 108 143 120 154 C132 143 141 144 141 150 C141 161 129 163 120 174 Z"/><path d="M111 138 C107 124 118 118 112 104"/><path d="M123 138 C128 124 117 117 124 103"/><path d="M150 69 L119 105"/><path d="M160 79 L129 111"/><path d="M92 119 c-5 -8 5 -12 0 -20"/><path d="M104 112 c-5 -8 5 -12 0 -20"/></svg></div><div class="cap">Submark · profile pic, favicon, to-go stamp</div></div>
     </div>
     <div class="rules">
       <div class="rule do">
@@ -162,6 +163,7 @@
       <div class="sw"><div class="chip" style="background:linear-gradient(120deg,#F0503E,#EC4B8E)"></div><div class="info"><div class="nm">Signature</div><div class="hex">Gradient</div><div class="use">The hero asset. Sparingly.</div></div></div>
     </div>
     <div class="grad-bar">Coral #F0503E&nbsp; →&nbsp; Pink #EC4B8E &nbsp;·&nbsp; the signature gradient</div>
+    <p style="font-size:14px;color:var(--muted);margin-top:14px">Pairings: ink text on cream · white text on coral, maroon, or the gradient · coral for links and small accents. One accent per layout — never a rainbow.</p>
   </div>
 </section>
 
@@ -183,6 +185,16 @@
       <div class="tag">Accent script — the wordmark voice</div>
       <div class="spec-script">Do it pho love.</div>
       <div class="scale">For the wordmark and the occasional warm flourish. Never for body copy.</div>
+    </div>
+    <div class="type-row">
+      <div class="tag">Type scale</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-family:'Poppins';font-weight:800;font-size:38px;line-height:1;letter-spacing:-.02em">Heading 1 — 40px</span>
+        <span style="font-family:'Poppins';font-weight:700;font-size:28px;line-height:1">Heading 2 — 30px</span>
+        <span style="font-family:'Poppins';font-weight:600;font-size:20px">Heading 3 — 20px</span>
+        <span style="font-family:'Inter';font-size:17px">Body — 16–18px, line-height 1.6</span>
+        <span style="font-family:'Inter';font-size:14px;color:var(--muted)">Small / caption — 14px</span>
+      </div>
     </div>
   </div>
 </section>
@@ -216,6 +228,12 @@
         <p>Corporate, hype, or generic restaurant-speak.</p>
         <p>Anything that sounds like a chain.</p>
       </div>
+    </div>
+    <div style="margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 28px">
+      <div style="font-family:'Poppins';font-weight:600;font-size:14px;margin-bottom:12px;color:var(--maroon)">Ready-to-post captions</div>
+      <p style="font-size:15px;margin-bottom:8px">"10+ hours of love simmering before we even open. <span class="heart">♥</span>"</p>
+      <p style="font-size:15px;margin-bottom:8px">"A father's recipe, a son's homecoming. Come hungry, leave family."</p>
+      <p style="font-size:15px">"New week, same slow broth. Pull up to 220 Park Hills Plaza. <span class="heart">♥</span>"</p>
     </div>
   </div>
 </section>
