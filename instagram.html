@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pho Love · Instagram Redesign</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coral:#F0503E; --pink:#EC4B8E; --grad:linear-gradient(120deg,#F0503E,#EC4B8E);
+    --grad-deep:linear-gradient(150deg,#7E2A2C,#F0503E 55%,#EC4B8E); --ink:#211C1B;
+    --cream:#F8F2E9; --cream-2:#F1E7D8; --maroon:#6F2A2E; --white:#fff; --muted:#857871; --line:rgba(33,28,27,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream-2);line-height:1.5;-webkit-font-smoothing:antialiased;padding:40px 16px;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .script{font-family:'Kaushan Script',cursive}
+  .pagehead{text-align:center;margin-bottom:14px}
+  .pagehead .eyebrow{font-family:'Poppins';font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+  .pagehead h1{font-family:'Poppins';font-weight:800;font-size:30px;letter-spacing:-.02em;margin-top:6px}
+  .pagehead p{color:var(--muted);font-size:14px;margin-top:4px}
+
+  .phone{width:430px;max-width:100%;background:#fff;border-radius:38px;border:1px solid var(--line);box-shadow:0 40px 90px -40px rgba(111,42,46,.55);overflow:hidden}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 10px}
+  .topbar .h{font-family:'Poppins';font-weight:700;font-size:18px;display:flex;align-items:center;gap:6px}
+  .topbar .h .heart{color:var(--pink)}
+  .topbar .dots{color:var(--ink);font-size:20px;letter-spacing:2px}
+
+  .prof{padding:6px 18px 0;display:flex;align-items:center;gap:22px}
+  .pic{width:84px;height:84px;border-radius:50%;flex:none;padding:3px;background:var(--grad)}
+  .pic svg{width:100%;height:100%;border-radius:50%;background:#fff;display:block}
+  .stats{display:flex;gap:22px;flex:1;justify-content:space-around}
+  .stat{text-align:center}
+  .stat b{font-family:'Poppins';font-weight:700;font-size:17px;display:block}
+  .stat span{font-size:13px;color:var(--muted)}
+
+  .bio{padding:12px 18px 4px}
+  .bio .nm{font-family:'Poppins';font-weight:700;font-size:15px}
+  .bio .cat{font-size:13px;color:var(--muted);margin-bottom:6px}
+  .bio p{font-size:13.5px;line-height:1.55}
+  .bio .lnk{color:#1b6ca8;font-weight:600;font-size:13.5px}
+  .btns{display:flex;gap:8px;padding:12px 18px}
+  .btns a{flex:1;text-align:center;font-family:'Poppins';font-weight:600;font-size:14px;padding:9px;border-radius:10px}
+  .btns .follow{background:var(--grad);color:#fff}
+  .btns .msg{background:var(--cream-2);color:var(--ink)}
+
+  .highs{display:flex;gap:18px;padding:16px 18px 8px;overflow-x:auto}
+  .high{text-align:center;flex:none;width:64px}
+  .high .ring{width:62px;height:62px;border-radius:50%;padding:2px;background:var(--grad);margin:0 auto}
+  .high .inner{width:100%;height:100%;border-radius:50%;background:var(--maroon);display:flex;align-items:center;justify-content:center;color:#fff}
+  .high .inner svg{width:30px;height:30px}
+  .high span{font-size:11px;display:block;margin-top:5px;color:var(--ink)}
+
+  .tabs{display:flex;border-top:1px solid var(--line);margin-top:8px}
+  .tabs div{flex:1;text-align:center;padding:11px;color:var(--muted)}
+  .tabs .on{color:var(--ink);border-top:2px solid var(--ink);margin-top:-1px}
+  .tabs svg{width:22px;height:22px;vertical-align:middle}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+  .tile{position:relative;aspect-ratio:1;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:12px;color:#fff}
+  .tile.g{background:var(--grad)} .tile.gd{background:var(--grad-deep)} .tile.mar{background:var(--maroon)} .tile.ink{background:var(--ink)}
+  .tile.cream{background:var(--cream);color:var(--maroon)}
+  .tile .wm{position:absolute;right:-18px;bottom:-18px;width:90px;height:90px;opacity:.16}
+  .tile .lbl{position:relative;font-family:'Poppins';font-weight:700;font-size:14px;line-height:1.2}
+  .tile .sm{position:relative;font-size:10.5px;opacity:.85;margin-top:4px;font-family:'Inter'}
+  .tile .q{position:relative;font-family:'Kaushan Script',cursive;font-size:20px;line-height:1.2}
+  .tile .stars{position:relative;color:#FFC36B;letter-spacing:2px;font-size:13px;margin-bottom:6px}
+  .tile .ph-tag{position:absolute;top:8px;left:8px;font-size:9.5px;font-family:'Poppins';font-weight:600;background:rgba(255,255,255,.85);color:var(--maroon);padding:2px 7px;border-radius:999px}
+
+  .note{max-width:430px;font-size:12.5px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0503E"/><stop offset="1" stop-color="#EC4B8E"/></linearGradient>
+  <symbol id="mark" viewBox="0 0 240 240"><circle cx="120" cy="120" r="118" fill="url(#pg)"/><g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M70 140 Q120 122 170 140"/><path d="M70 140 C72 172 92 191 120 191 C148 191 168 172 170 140"/><path d="M106 195 Q120 201 134 195"/><path d="M120 174 C111 163 99 161 99 150 C99 144 108 143 120 154 C132 143 141 144 141 150 C141 161 129 163 120 174 Z"/><path d="M111 138 C107 124 118 118 112 104"/><path d="M123 138 C128 124 117 117 124 103"/><path d="M150 69 L119 105"/><path d="M160 79 L129 111"/><path d="M92 119 c-5 -8 5 -12 0 -20"/><path d="M104 112 c-5 -8 5 -12 0 -20"/></g></symbol>
+  <symbol id="ic-bowl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16M5 11c.6 4 3.5 6 7 6s6.4-2 7-6M10 11V7M14 11V6"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-1-.7-8-5.2-8-11A4.5 4.5 0 0112 6a4.5 4.5 0 018 4c0 5.8-7 10.3-8 11z"/></symbol>
+  <symbol id="ic-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V5a2 2 0 012-2h7l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.4"/></symbol>
+  <symbol id="ic-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16v10H4zM3 9l2-5h14l2 5"/></symbol>
+  <symbol id="ic-grid" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></symbol>
+  <symbol id="ic-reel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 8h18M8 3l3 5M14 3l3 5M10 12l5 3-5 3z"/></symbol>
+</defs></svg>
+
+<div class="pagehead">
+  <span class="eyebrow">Instagram redesign</span>
+  <h1>@doitpholove</h1>
+  <p>A cohesive, on-brand feed — every post reads as Pho Love.</p>
+</div>
+
+<div class="phone">
+  <div class="topbar">
+    <div class="h">doitpholove <span class="heart">♥</span></div>
+    <div class="dots">⋯</div>
+  </div>
+
+  <div class="prof">
+    <div class="pic"><svg viewBox="0 0 240 240"><use href="#mark"/></svg></div>
+    <div class="stats">
+      <div class="stat"><b>48</b><span>posts</span></div>
+      <div class="stat"><b>2,140</b><span>followers</span></div>
+      <div class="stat"><b>312</b><span>following</span></div>
+    </div>
+  </div>
+
+  <div class="bio">
+    <div class="nm">Pho Love</div>
+    <div class="cat">Vietnamese Restaurant</div>
+    <p>🍜 10+ hour broth, made with love <span class="heart">♥</span><br>
+    Family-owned · Altoona, PA<br>
+    Dine in · Takeout · DoorDash<br>
+    📍 220 Park Hills Plaza</p>
+    <p class="lnk">order.doitpholove.com</p>
+  </div>
+  <div class="btns">
+    <a class="follow">Follow</a>
+    <a class="msg">Message</a>
+    <a class="msg" style="flex:none;padding:9px 14px">▾</a>
+  </div>
+
+  <div class="highs">
+    <div class="high"><div class="ring"><div class="inner"><svg><use href="#ic-bowl"/></svg></div></div><span>Menu</span></div>
+    <div class="high"><div class="ring"><div class="inner"><svg><use href="#ic-heart"/></svg></div></div><span>Our Story</span></div>
+    <div class="high"><div class="ring"><div class="inner"><svg><use href="#ic-tag"/></svg></div></div><span>Specials</span></div>
+    <div class="high"><div class="ring"><div class="inner"><svg><use href="#ic-store"/></svg></div></div><span>Visit</span></div>
+    <div class="high"><div class="ring"><div class="inner">★</div></div><span>Reviews</span></div>
+  </div>
+
+  <div class="tabs">
+    <div class="on"><svg><use href="#ic-grid"/></svg></div>
+    <div><svg><use href="#ic-reel"/></svg></div>
+  </div>
+
+  <div class="grid">
+    <div class="tile gd"><svg class="wm" viewBox="0 0 240 240"><use href="#mark"/></svg><div class="lbl">Now Open</div><div class="sm">Altoona, PA <span class="heart">♥</span></div></div>
+    <div class="tile g"><span class="ph-tag">photo</span><svg class="wm" viewBox="0 0 240 240"><use href="#mark"/></svg><div class="lbl">Pho Dac Biet</div><div class="sm">the house special</div></div>
+    <div class="tile cream"><div class="q">Made with love,<br>served with more</div></div>
+
+    <div class="tile g"><span class="ph-tag">photo</span><svg class="wm" viewBox="0 0 240 240"><use href="#mark"/></svg><div class="lbl">Pad Thai</div><div class="sm">off the wok</div></div>
+    <div class="tile ink"><div class="stars">★★★★★</div><div class="q" style="font-size:17px;color:#fff">"You can taste<br>the love."</div></div>
+    <div class="tile g"><span class="ph-tag">photo</span><svg class="wm" viewBox="0 0 240 240"><use href="#mark"/></svg><div class="lbl">Spring Rolls</div><div class="sm">fresh daily</div></div>
+
+    <div class="tile gd"><div class="lbl" style="font-size:30px;font-family:Poppins">10+</div><div class="sm">hours of broth, every pot</div></div>
+    <div class="tile g"><span class="ph-tag">photo</span><svg class="wm" viewBox="0 0 240 240"><use href="#mark"/></svg><div class="lbl">Bun Bowl</div><div class="sm">herbs + nuoc cham</div></div>
+    <div class="tile mar"><svg class="wm" viewBox="0 0 240 240"><use href="#mark"/></svg><div class="q" style="font-size:22px">Do it<br>pho love</div></div>
+  </div>
+</div>
+
+<p class="note">Redesign mockup. Photo tiles are placeholders — Ken's real dish photos drop straight in. Quote, review, and announcement tiles are reusable branded templates so the feed stays cohesive between food posts.</p>
+
+</body>
+</html>

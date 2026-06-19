@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pho Love · Vietnamese & Thai in Altoona, PA · Made with Love</title>
+<meta name="description" content="Pho Love is a family-owned Vietnamese and Thai restaurant in Altoona, PA. 10+ hour broth, made with love. Order pickup, get it delivered, or come sit with us at 220 Park Hills Plaza.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="Pho Love · Vietnamese & Thai in Altoona, PA">
+<meta property="og:description" content="A father's recipe, a son's homecoming, and a broth simmered 10+ hours. Made with love at 220 Park Hills Plaza, Altoona.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coral:#F0503E; --pink:#EC4B8E; --grad:linear-gradient(120deg,#F0503E 0%,#EC4B8E 100%);
+    --grad-deep:linear-gradient(150deg,#7E2A2C 0%,#F0503E 52%,#EC4B8E 100%);
+    --ink:#211C1B; --cream:#F8F2E9; --cream-2:#F1E7D8; --maroon:#6F2A2E; --sriracha:#F2622E;
+    --white:#fff; --muted:#857871; --line:rgba(33,28,27,.10);
+    --shadow:0 18px 50px -22px rgba(111,42,46,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.h{font-family:'Poppins',sans-serif;font-weight:700;line-height:1.12;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .script{font-family:'Kaushan Script',cursive;font-weight:400;letter-spacing:0}
+  .eyebrow{font-family:'Poppins',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+  .heart{color:var(--pink)}
+  .ic{width:24px;height:24px;flex:none;display:inline-block;vertical-align:middle}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s,color .18s,border-color .18s;white-space:nowrap}
+  .btn .ic{width:19px;height:19px}
+  .btn-grad{background:var(--grad);color:#fff;box-shadow:0 10px 26px -10px rgba(236,75,142,.7)}
+  .btn-grad:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(236,75,142,.85)}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-ink:hover{transform:translateY(-2px)}
+  .btn-out{background:transparent;color:var(--ink);border-color:rgba(33,28,27,.25)}
+  .btn-out:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn-light{background:#fff;color:var(--ink);border-color:var(--line)}
+  .btn-light:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-2px)}
+  .btn-white{background:#fff;color:var(--maroon)}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+  .btn-ghost-w{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-ghost-w:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:60;background:rgba(248,242,233,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Kaushan Script',cursive;font-weight:400;font-size:28px;letter-spacing:0}
+  .brand .badge{width:46px;height:46px;flex:none;border-radius:50%;box-shadow:0 6px 16px -6px rgba(236,75,142,.6)}
+  .brand .logo-img{height:44px;width:auto;display:block}
+  .foot .logo-img{height:48px;width:auto;display:block}
+  .nav-links{display:flex;gap:30px;font-weight:500;font-size:15px;font-family:'Poppins'}
+  .nav-links a{position:relative;padding:4px 0}
+  .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--grad);transition:right .25s}
+  .nav-links a:hover{color:var(--coral)}
+  .nav-links a:hover::after{right:0}
+  .nav-cta{display:flex;align-items:center;gap:10px}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink);padding:6px}
+  @media(max-width:860px){
+    .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 24px;gap:18px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+    .nav-links.open{display:flex}
+    .nav-toggle{display:inline-flex}
+    .nav .btn-grad{display:none}
+  }
+
+  /* hero */
+  .hero{position:relative;background:var(--grad-deep);color:#fff;text-align:center;padding:64px 0 96px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% -10%,rgba(255,255,255,.22),transparent 60%);pointer-events:none}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;background:var(--cream);clip-path:ellipse(75% 100% at 50% 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-badge{position:relative;width:128px;height:128px;margin:0 auto 26px;animation:floaty 6s ease-in-out infinite}
+  .hero-badge .ring{position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%);filter:blur(6px)}
+  .hero-badge svg{position:relative;width:128px;height:128px;border-radius:50%;box-shadow:0 22px 50px -16px rgba(0,0,0,.5)}
+  .steam{position:absolute;left:50%;top:-26px;transform:translateX(-50%);display:flex;gap:11px;opacity:.85}
+  .steam span{width:5px;height:30px;border-radius:999px;background:linear-gradient(to top,rgba(255,255,255,.7),transparent);animation:rise 3.4s ease-in-out infinite}
+  .steam span:nth-child(2){animation-delay:.6s;height:38px}
+  .steam span:nth-child(3){animation-delay:1.2s}
+  @keyframes rise{0%{opacity:0;transform:translateY(6px) scaleY(.7)}40%{opacity:.8}100%{opacity:0;transform:translateY(-14px) scaleY(1.15)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .hero h1{font-size:clamp(50px,10vw,104px);font-weight:800;line-height:.95}
+  .hero h1 .script{display:block;font-family:'Kaushan Script',cursive;font-weight:400;font-size:clamp(52px,11vw,122px);line-height:1.06;color:#FFE7D8;text-shadow:0 4px 30px rgba(0,0,0,.25);letter-spacing:0;margin-top:.04em;padding-bottom:.08em}
+  .hero p.lead{font-size:clamp(17px,2.3vw,21px);color:rgba(255,255,255,.92);max-width:600px;margin:26px auto 32px}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .open-pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500;margin-top:30px;backdrop-filter:blur(4px)}
+  .dot{width:9px;height:9px;border-radius:50%;background:#7CF29B;box-shadow:0 0 0 4px rgba(124,242,155,.25)}
+
+  /* marquee */
+  .marquee{background:var(--ink);color:#fff;overflow:hidden;padding:15px 0;white-space:nowrap;position:relative}
+  .marquee .track{display:inline-flex;align-items:center;gap:26px;font-family:'Poppins';font-weight:600;font-size:15px;letter-spacing:.05em;text-transform:uppercase;animation:scroll 26s linear infinite}
+  .marquee .track span{display:inline-flex;align-items:center;gap:26px}
+  .marquee .ic{width:15px;height:15px;color:var(--pink)}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* order bar */
+  .orderbar{margin-top:-46px;position:relative;z-index:5}
+  .orderbar .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .ord{display:flex;align-items:center;gap:15px;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .ord:hover{transform:translateY(-4px);box-shadow:0 26px 56px -24px rgba(111,42,46,.5)}
+  .ord .chip{width:50px;height:50px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;flex:none;color:#fff}
+  .ord .chip .ic{width:26px;height:26px}
+  .ord b{font-family:'Poppins';font-weight:600;font-size:16px;display:block}
+  .ord span.s{font-size:13px;color:var(--muted)}
+  .ord .arrow{margin-left:auto;color:var(--coral);opacity:0;transform:translateX(-6px);transition:.2s}
+  .ord:hover .arrow{opacity:1;transform:translateX(0)}
+  @media(max-width:780px){.orderbar .grid{grid-template-columns:1fr}.orderbar{margin-top:-30px}}
+
+  /* sections */
+  section.block{padding:84px 0}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 50px}
+  .sec-head h2{font-size:clamp(32px,5vw,48px);margin:12px 0}
+  .sec-head p{color:var(--muted);font-size:17px}
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--coral);opacity:.9}
+  .divider::before,.divider::after{content:"";height:1px;width:54px;background:linear-gradient(90deg,transparent,rgba(240,80,62,.5))}
+  .divider::after{background:linear-gradient(90deg,rgba(240,80,62,.5),transparent)}
+  .divider .ic{width:18px;height:18px}
+
+  /* signatures */
+  .sigs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .sig{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
+  .sig:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .sig .ph{height:172px;background:var(--grad);position:relative;display:flex;align-items:flex-end;justify-content:space-between;padding:16px;overflow:hidden}
+  .sig .ph .watermark{position:absolute;right:-22px;top:-22px;width:130px;height:130px;opacity:.22}
+  .sig .ph .tag{position:relative;background:rgba(255,255,255,.95);color:var(--maroon);font-family:'Poppins';font-weight:600;font-size:12px;padding:6px 12px;border-radius:999px}
+  .sig .ph .price{position:relative;color:#fff;font-family:'Poppins';font-weight:800;font-size:22px}
+  .sig .body{padding:20px 22px 24px}
+  .sig h3{font-size:21px}
+  .sig p{color:var(--muted);font-size:14px;margin-top:7px}
+  @media(max-width:780px){.sigs{grid-template-columns:1fr}}
+
+  /* menu */
+  .menu{background:#fff}
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 60px}
+  .mcol h3{font-size:19px;color:var(--maroon);display:flex;align-items:center;gap:9px;padding-bottom:13px;margin-bottom:15px;border-bottom:2px solid var(--cream-2)}
+  .mcol h3 .ic{width:17px;height:17px;color:var(--pink)}
+  .mitem{display:flex;justify-content:space-between;gap:16px;padding:10px 0;align-items:baseline}
+  .mitem .nm{font-weight:600;font-family:'Poppins';font-size:15px}
+  .mitem .ds{font-size:13px;color:var(--muted)}
+  .mitem .pr{font-family:'Poppins';font-weight:700;color:var(--coral);white-space:nowrap}
+  .menu-note{text-align:center;color:var(--muted);font-size:13px;margin-top:36px}
+  @media(max-width:780px){.menu-grid{grid-template-columns:1fr;gap:32px}}
+
+  /* story */
+  .story{background:var(--maroon);color:#fff;position:relative;overflow:hidden}
+  .story::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;background:radial-gradient(circle,rgba(240,80,62,.45),transparent 70%);pointer-events:none}
+  .story-in{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center;position:relative}
+  .story .eyebrow{color:#FFC9A8}
+  .story h2{font-size:clamp(30px,4.6vw,44px);margin:14px 0 20px}
+  .story p{color:rgba(255,255,255,.82);font-size:16px;margin-bottom:15px}
+  .story .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:34px;backdrop-filter:blur(4px)}
+  .story .card .big{font-family:'Poppins';font-weight:800;font-size:46px;background:linear-gradient(120deg,#FFD7A8,#FF9FC4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .story .card .quote{font-family:'Kaushan Script',cursive;font-size:22px;line-height:1.55;margin-top:18px;color:#fff}
+  @media(max-width:780px){.story-in{grid-template-columns:1fr;gap:30px}}
+
+  /* forms */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:0 10px 30px -24px rgba(111,42,46,.5)}
+  .panel h3{font-size:23px;margin-bottom:6px}
+  .panel .sub{color:var(--muted);font-size:15px;margin-bottom:20px}
+  label{display:block;font-size:13px;font-weight:600;font-family:'Poppins';margin:12px 0 6px}
+  input,textarea,select{width:100%;font-family:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 3px rgba(240,80,62,.12)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:780px){.split{grid-template-columns:1fr}}
+
+  /* visit */
+  .visit-in{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:stretch}
+  .info-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:0 10px 30px -24px rgba(111,42,46,.5)}
+  .info-row{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .info-row:last-of-type{border-bottom:none}
+  .info-row .chip{width:42px;height:42px;border-radius:12px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;flex:none;color:var(--coral)}
+  .info-row .chip .ic{width:21px;height:21px}
+  .info-row b{font-family:'Poppins';font-weight:600;font-size:15px;display:block;margin-bottom:2px}
+  .info-row span{font-size:14px;color:var(--muted)}
+  .map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:360px}
+  .map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+  @media(max-width:780px){.visit-in{grid-template-columns:1fr}}
+
+  /* reviews */
+  .reviews{background:#fff}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rev{background:var(--cream);border-radius:22px;padding:26px;border:1px solid var(--line);position:relative}
+  .rev .mark-q{font-family:'Kaushan Script',cursive;font-size:42px;line-height:.5;color:var(--pink);opacity:.4;height:24px}
+  .stars{color:var(--sriracha);font-size:15px;letter-spacing:3px;margin-bottom:10px}
+  .rev p{font-size:15px}
+  .rev .who{margin-top:16px;font-family:'Poppins';font-weight:600;font-size:14px}
+  @media(max-width:780px){.rgrid{grid-template-columns:1fr}}
+
+  /* signup */
+  .signup{background:var(--grad);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .signup::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 50% 0,rgba(255,255,255,.2),transparent 60%)}
+  .signup .wrap{position:relative}
+  .signup h2{font-size:clamp(30px,4.6vw,42px);margin-bottom:10px}
+  .signup p{opacity:.94;max-width:520px;margin:0 auto 26px}
+  .signup form{display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+  .signup input{flex:1;min-width:230px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);color:#fff}
+  .signup input::placeholder{color:rgba(255,255,255,.8)}
+
+  /* footer */
+  footer{background:var(--ink);color:rgba(255,255,255,.7);padding:60px 0 32px}
+  .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
+  .foot .brand{color:#fff;margin-bottom:16px}
+  .foot a{color:rgba(255,255,255,.7);transition:color .15s}
+  .foot a:hover{color:#fff}
+  .foot h4{font-family:'Poppins';font-weight:600;color:#fff;font-size:14px;margin-bottom:13px;letter-spacing:.04em}
+  .foot ul{list-style:none}
+  .foot li{padding:5px 0;font-size:14px}
+  .copy{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:24px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:780px){.foot{grid-template-columns:1fr 1fr}}
+
+  /* food gallery */
+  .gallery{background:var(--cream)}
+  .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .gtile{position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;background:var(--grad);display:flex;align-items:flex-end;padding:18px;color:#fff;box-shadow:0 14px 36px -22px rgba(111,42,46,.6);transition:transform .2s}
+  .gtile:hover{transform:translateY(-4px)}
+  .gtile:nth-child(3n+2){background:linear-gradient(300deg,#7E2A2C,#F0503E)}
+  .gtile:nth-child(3n){background:linear-gradient(60deg,#EC4B8E,#F2622E)}
+  .gtile .gw{position:absolute;right:-22px;top:-22px;width:140px;height:140px;opacity:.16}
+  .gtile span{position:relative;font-family:'Poppins';font-weight:700;font-size:18px;text-shadow:0 2px 12px rgba(0,0,0,.28)}
+  @media(max-width:760px){.ggrid{grid-template-columns:1fr 1fr}}
+
+  /* live hours + sticky mobile order */
+  .open-pill.closed .dot{background:#FFB59E;box-shadow:0 0 0 4px rgba(255,181,158,.25)}
+  .mobilebar{display:none}
+  @media(max-width:880px){
+    .mobilebar{display:flex;align-items:center;justify-content:center;gap:9px;position:fixed;left:14px;right:14px;bottom:14px;z-index:80;background:var(--grad);color:#fff;font-family:'Poppins';font-weight:600;font-size:16px;padding:15px;border-radius:999px;box-shadow:0 14px 30px -8px rgba(236,75,142,.75)}
+    .mobilebar .ic{width:20px;height:20px}
+    body{padding-bottom:84px}
+  }
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .hero-badge,.steam span,.marquee .track{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SVG sprite: logo mark + line icons (match the logo's white line-art style) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0503E"/><stop offset="1" stop-color="#EC4B8E"/></linearGradient>
+  <symbol id="mark" viewBox="0 0 240 240">
+    <circle cx="120" cy="120" r="118" fill="url(#pg)"/>
+    <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M70 140 Q120 122 170 140"/>
+      <path d="M70 140 C72 172 92 191 120 191 C148 191 168 172 170 140"/>
+      <path d="M106 195 Q120 201 134 195"/>
+      <path d="M120 174 C111 163 99 161 99 150 C99 144 108 143 120 154 C132 143 141 144 141 150 C141 161 129 163 120 174 Z"/>
+      <path d="M111 138 C107 124 118 118 112 104"/>
+      <path d="M123 138 C128 124 117 117 124 103"/>
+      <path d="M150 69 L119 105"/><path d="M160 79 L129 111"/>
+      <path d="M92 119 c-5 -8 5 -12 0 -20"/><path d="M104 112 c-5 -8 5 -12 0 -20"/>
+    </g>
+  </symbol>
+  <symbol id="ic-chop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l16 4M4 9l15 4"/><path d="M4 13c1 5 5 7 8 7s7-2 8-7"/><path d="M9 20h6"/></symbol>
+  <symbol id="ic-scooter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.4 18h7.2M18 16V8h-2.5M15.5 8l-3 8M5 8h4l1.5 4"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l1.5 5-2 1.5a13 13 0 006 6l1.5-2 5 1.5v3a2 2 0 01-2.2 2A16 16 0 013 5.2 2 2 0 015 3z"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-1-.7-8-5.2-8-11A4.5 4.5 0 0112 6a4.5 4.5 0 018 4c0 5.8-7 10.3-8 11z"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</defs></svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="logo.png" alt="Pho Love — Vietnamese Restaurant" class="logo-img"></a>
+    <nav class="nav-links" id="navlinks">
+      <a href="menu.html">Menu</a>
+      <a href="story.html">Our story</a>
+      <a href="#catering">Catering</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-grad" href="#order"><svg class="ic"><use href="#ic-chop"/></svg> Order pickup</a>
+      <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-badge">
+      <div class="steam"><span></span><span></span><span></span></div>
+      <div class="ring"></div>
+      <svg viewBox="0 0 240 240"><use href="#mark"/></svg>
+    </div>
+    <span class="eyebrow" style="color:#FFE0CC">Vietnamese &amp; Thai · Altoona, PA</span>
+    <h1>Do it <span class="script">pho love.</span></h1>
+    <p class="lead">A father's recipe, a son's homecoming, and a broth we simmer 10+ hours. Real Vietnamese and Thai, made with love at Park Hills Plaza.</p>
+    <div class="hero-cta">
+      <a class="btn btn-white" href="#order"><svg class="ic"><use href="#ic-chop"/></svg> Order pickup</a>
+      <a class="btn btn-ghost-w" href="menu.html">See the menu</a>
+    </div>
+    <div><span class="open-pill" id="hoursPill"><span class="dot"></span> <span id="hoursText">Open now · 11am–8pm today</span></span></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Made with love <svg class="ic"><use href="#ic-heart"/></svg> 10+ hour broth <svg class="ic"><use href="#ic-heart"/></svg> Do it pho love <svg class="ic"><use href="#ic-heart"/></svg> Vietnamese &amp; Thai <svg class="ic"><use href="#ic-heart"/></svg> Family owned <svg class="ic"><use href="#ic-heart"/></svg> </span>
+    <span>Made with love <svg class="ic"><use href="#ic-heart"/></svg> 10+ hour broth <svg class="ic"><use href="#ic-heart"/></svg> Do it pho love <svg class="ic"><use href="#ic-heart"/></svg> Vietnamese &amp; Thai <svg class="ic"><use href="#ic-heart"/></svg> Family owned <svg class="ic"><use href="#ic-heart"/></svg> </span>
+  </div>
+</div>
+
+<section class="orderbar" id="order">
+  <div class="wrap">
+    <div class="grid">
+      <a class="ord reveal" href="tel:+18142012713">
+        <span class="chip"><svg class="ic"><use href="#ic-chop"/></svg></span>
+        <span><b>Order pickup</b><span class="s">Order ahead, skip the wait</span></span>
+        <svg class="ic arrow"><use href="#ic-arrow"/></svg>
+      </a>
+      <a class="ord reveal" href="https://www.doordash.com/food-delivery/altoona-pa-restaurants/pho/" target="_blank" rel="noopener">
+        <span class="chip"><svg class="ic"><use href="#ic-scooter"/></svg></span>
+        <span><b>Get it delivered</b><span class="s">Now on DoorDash</span></span>
+        <svg class="ic arrow"><use href="#ic-arrow"/></svg>
+      </a>
+      <a class="ord reveal" href="tel:+18142012713">
+        <span class="chip"><svg class="ic"><use href="#ic-phone"/></svg></span>
+        <span><b>Call us</b><span class="s">(814) 201-2713</span></span>
+        <svg class="ic arrow"><use href="#ic-arrow"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="divider"><svg class="ic"><use href="#ic-heart"/></svg></div>
+      <h2>Start with a signature</h2>
+      <p>Three bowls people drive back for. The broth does the talking.</p>
+    </div>
+    <div class="sigs">
+      <div class="sig reveal">
+        <div class="ph"><svg class="watermark" viewBox="0 0 240 240"><use href="#mark"/></svg><span class="tag">House special</span><span class="price">$14.50</span></div>
+        <div class="body"><h3>Pho Dac Biet</h3><p>The full experience. Steak, brisket, and tendon in our slow-simmered broth.</p></div>
+      </div>
+      <div class="sig reveal">
+        <div class="ph"><svg class="watermark" viewBox="0 0 240 240"><use href="#mark"/></svg><span class="tag">Most loved</span><span class="price">$13.00</span></div>
+        <div class="body"><h3>Pho Tai</h3><p>Rare beef sliced thin, cooked right in the bowl by 10+ hours of broth.</p></div>
+      </div>
+      <div class="sig reveal">
+        <div class="ph"><svg class="watermark" viewBox="0 0 240 240"><use href="#mark"/></svg><span class="tag">Wok favorite</span><span class="price">$13.00</span></div>
+        <div class="body"><h3>Pineapple Fried Rice</h3><p>Sweet, savory, and loud off the wok. The one the Fridays are made of.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Made with love, all of it</h2>
+      <p>Vietnamese classics and Thai favorites, from the broth to the wok.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="mcol reveal">
+        <h3><svg class="ic"><use href="#ic-heart"/></svg> Pho</h3>
+        <div class="mitem"><div><span class="nm">Pho Dac Biet</span><div class="ds">House special: steak, brisket, tendon</div></div><span class="pr">14.50</span></div>
+        <div class="mitem"><div><span class="nm">Pho Tai</span><div class="ds">Rare beef</div></div><span class="pr">13.00</span></div>
+        <div class="mitem"><div><span class="nm">Chicken Pho</span><div class="ds">Sliced chicken, clear broth</div></div><span class="pr">12.50</span></div>
+        <div class="mitem"><div><span class="nm">Veggie &amp; Tofu Pho</span><div class="ds">Vegetable broth</div></div><span class="pr">12.00</span></div>
+      </div>
+      <div class="mcol reveal">
+        <h3><svg class="ic"><use href="#ic-heart"/></svg> Bun &amp; rice bowls</h3>
+        <div class="mitem"><div><span class="nm">Grilled Pork Bun</span><div class="ds">Vermicelli, herbs, nuoc cham</div></div><span class="pr">13.00</span></div>
+        <div class="mitem"><div><span class="nm">Lemongrass Chicken Rice</span><div class="ds">Over jasmine rice</div></div><span class="pr">12.50</span></div>
+        <div class="mitem"><div><span class="nm">Build-your-own bowl</span><div class="ds">Pick your protein and base</div></div><span class="pr">11.00</span></div>
+        <div class="mitem"><div><span class="nm">Spring Roll Bun</span><div class="ds">Crispy rolls over vermicelli</div></div><span class="pr">13.00</span></div>
+      </div>
+      <div class="mcol reveal">
+        <h3><svg class="ic"><use href="#ic-heart"/></svg> Thai specials</h3>
+        <div class="mitem"><div><span class="nm">Pad Thai</span><div class="ds">Rice noodles, egg, peanut</div></div><span class="pr">13.50</span></div>
+        <div class="mitem"><div><span class="nm">Drunken Noodles</span><div class="ds">Wide noodles, basil, chili</div></div><span class="pr">13.50</span></div>
+        <div class="mitem"><div><span class="nm">Combination Fried Rice</span><div class="ds">Wok-fried, your protein</div></div><span class="pr">13.00</span></div>
+        <div class="mitem"><div><span class="nm">Lo Mein</span><div class="ds">Soft egg noodles</div></div><span class="pr">12.50</span></div>
+      </div>
+      <div class="mcol reveal">
+        <h3><svg class="ic"><use href="#ic-heart"/></svg> Starters &amp; drinks</h3>
+        <div class="mitem"><div><span class="nm">Fresh Spring Rolls (2)</span><div class="ds">Shrimp or veggie</div></div><span class="pr">4.50</span></div>
+        <div class="mitem"><div><span class="nm">Fried Egg Rolls (3)</span></div><span class="pr">5.50</span></div>
+        <div class="mitem"><div><span class="nm">Pork Dumplings (6)</span></div><span class="pr">6.50</span></div>
+        <div class="mitem"><div><span class="nm">Vietnamese Iced Coffee</span><div class="ds">Also: Thai tea, boba</div></div><span class="pr">4.50</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px"><a class="btn btn-grad" href="menu.html">View the full menu <svg class="ic"><use href="#ic-arrow"/></svg></a></div>
+    <p class="menu-note">Sample menu shown for the preview. Final items and prices confirmed with Pho Love.</p>
+  </div>
+</section>
+
+<section class="block gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="divider"><svg class="ic"><use href="#ic-heart"/></svg></div>
+      <h2>Straight from the kitchen</h2>
+      <p>10+ hour broth, fresh herbs, and a wok that never sleeps.</p>
+    </div>
+    <div class="ggrid">
+      <div class="gtile reveal"><svg class="gw" viewBox="0 0 240 240"><use href="#mark"/></svg><span>Pho Dac Biet</span></div>
+      <div class="gtile reveal"><svg class="gw" viewBox="0 0 240 240"><use href="#mark"/></svg><span>Pho Tai</span></div>
+      <div class="gtile reveal"><svg class="gw" viewBox="0 0 240 240"><use href="#mark"/></svg><span>Pad Thai</span></div>
+      <div class="gtile reveal"><svg class="gw" viewBox="0 0 240 240"><use href="#mark"/></svg><span>Grilled Pork Bun</span></div>
+      <div class="gtile reveal"><svg class="gw" viewBox="0 0 240 240"><use href="#mark"/></svg><span>Pineapple Fried Rice</span></div>
+      <div class="gtile reveal"><svg class="gw" viewBox="0 0 240 240"><use href="#mark"/></svg><span>Vietnamese Iced Coffee</span></div>
+    </div>
+    <p class="menu-note">Photos drop right in here — these branded tiles are ready for Pho Love's real dishes.</p>
+  </div>
+</section>
+
+<section class="block story" id="story">
+  <div class="wrap story-in">
+    <div class="reveal">
+      <span class="eyebrow">Our story</span>
+      <h2>A father's dream, served in a bowl</h2>
+      <p>At Pho Love, everything we serve is crafted with love and care. Since 2025 we've been proud to share the vibrant flavors of Southeast Asia — authentic Vietnamese cuisine that warms the heart and soul.</p>
+      <p>Our story begins with a father's dream. A Vietnamese and Laotian immigrant whose life was forever shaped by the Vietnam War of the 1960s, he was displaced from his home — but his love for food never wavered. He dreamed of sharing the cherished dishes of his childhood with others.</p>
+      <p>For us, food is more than a meal. It's how we bring people together — connection, community, and celebration. When you dine with us, you're sharing in a tradition of love, culture, and culinary excellence.</p>
+      <a class="btn btn-white" href="#visit">Come sit with us</a>
+    </div>
+    <div class="card reveal">
+      <div class="big">10+ hours</div>
+      <p style="opacity:.82;margin-top:4px">of slow simmer in every pot of broth</p>
+      <div class="quote">"Light, fluffy, filling. The broth is clear and boiled a long time." <span class="heart">♥</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="catering">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Bring Pho Love to your people</span>
+      <h2>Catering &amp; large parties</h2>
+      <p>Feeding an office, a team, a celebration? We will set you up. Tell us a little and we will get right back to you.</p>
+    </div>
+    <div class="split">
+      <form class="panel reveal" action="mailto:doitpholove@gmail.com" method="post" enctype="text/plain">
+        <h3>Catering inquiry</h3>
+        <p class="sub">Office lunches, group orders, events. Big or small.</p>
+        <div class="row2">
+          <div><label>Name</label><input name="name" required></div>
+          <div><label>Phone</label><input name="phone" required></div>
+        </div>
+        <div class="row2">
+          <div><label>Date needed</label><input name="date" type="date"></div>
+          <div><label>Headcount</label><input name="headcount" type="number" min="5"></div>
+        </div>
+        <label>What are you thinking?</label>
+        <textarea name="notes" rows="3" placeholder="Pickup or drop-off, any favorites, dietary needs..."></textarea>
+        <div style="margin-top:18px"><button class="btn btn-grad" type="submit">Send catering request</button></div>
+      </form>
+      <form class="panel reveal" action="mailto:doitpholove@gmail.com" method="post" enctype="text/plain">
+        <h3>Reserve a table</h3>
+        <p class="sub">Walk-ins always welcome. For groups of 6 or more, give us a heads up.</p>
+        <div class="row2">
+          <div><label>Name</label><input name="name" required></div>
+          <div><label>Phone</label><input name="phone" required></div>
+        </div>
+        <div class="row2">
+          <div><label>Date &amp; time</label><input name="datetime" type="datetime-local"></div>
+          <div><label>Party size</label><input name="party" type="number" min="1"></div>
+        </div>
+        <label>Anything we should know?</label>
+        <textarea name="notes" rows="3" placeholder="High chair, celebration, seating preference..."></textarea>
+        <div style="margin-top:18px"><button class="btn btn-ink" type="submit">Request reservation</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="block visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Come sit with us</span>
+      <h2>Find Pho Love</h2>
+    </div>
+    <div class="visit-in">
+      <div class="info-card reveal">
+        <div class="info-row"><span class="chip"><svg class="ic"><use href="#ic-pin"/></svg></span><div><b>Address</b><span>220 Park Hills Plaza<br>Altoona, PA 16602</span></div></div>
+        <div class="info-row"><span class="chip"><svg class="ic"><use href="#ic-clock"/></svg></span><div><b>Hours</b><span>Sun–Thu · 11am to 8pm<br>Fri &amp; Sat · 11am to 9pm</span></div></div>
+        <div class="info-row"><span class="chip"><svg class="ic"><use href="#ic-phone"/></svg></span><div><b>Phone</b><span><a href="tel:+18142012713">(814) 201-2713</a></span></div></div>
+        <div class="info-row"><span class="chip"><svg class="ic"><use href="#ic-mail"/></svg></span><div><b>Email</b><span><a href="mailto:doitpholove@gmail.com">doitpholove@gmail.com</a></span></div></div>
+        <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-grad" href="https://www.google.com/maps/dir/?api=1&destination=220+Park+Hills+Plaza+Altoona+PA+16602" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-light" href="#order">Order ahead</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe loading="lazy" title="Map to Pho Love, 220 Park Hills Plaza, Altoona PA" src="https://www.google.com/maps?q=220+Park+Hills+Plaza,+Altoona,+PA+16602&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">In their words</span>
+      <h2>Altoona is falling in love</h2>
+    </div>
+    <div class="rgrid">
+      <div class="rev reveal"><div class="mark-q">"</div><div class="stars">★★★★★</div><p>"Great new place with good prices and good food. I have been three times in nine days."</p><div class="who">A new regular</div></div>
+      <div class="rev reveal"><div class="mark-q">"</div><div class="stars">★★★★★</div><p>"This place isn't just about the food, it's the heart behind it. You can taste the love."</p><div class="who">Local diner</div></div>
+      <div class="rev reveal"><div class="mark-q">"</div><div class="stars">★★★★★</div><p>"Clear, rich broth and the friendliest family. My new pho spot in Altoona."</p><div class="who">Pho fan</div></div>
+    </div>
+    <div style="text-align:center;margin-top:34px"><a class="btn btn-out" href="https://www.google.com/search?q=Pho+Love+Altoona+PA+reviews" target="_blank" rel="noopener">Leave a lovely review <span class="heart">♥</span></a></div>
+  </div>
+</section>
+
+<section class="block signup">
+  <div class="wrap">
+    <h2>Join the Pho Love family</h2>
+    <p>First dibs on specials, new dishes, and the occasional "we miss you" treat. No spam, just love.</p>
+    <form action="mailto:doitpholove@gmail.com" method="post" enctype="text/plain">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button class="btn btn-ink" type="submit">Sign me up</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><img src="logo-white.png" alt="Pho Love — Vietnamese Restaurant" class="logo-img"></a>
+        <p style="font-size:14px;max-width:290px">Family-owned Vietnamese and Thai in Altoona, PA. Made with love, served with more. <span class="heart">♥</span></p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>220 Park Hills Plaza</li>
+          <li>Altoona, PA 16602</li>
+          <li><a href="tel:+18142012713">(814) 201-2713</a></li>
+          <li>Sun–Thu 11–8 · Fri–Sat 11–9</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Order &amp; follow</h4>
+        <ul>
+          <li><a href="#order">Order pickup</a></li>
+          <li><a href="https://www.doordash.com/food-delivery/altoona-pa-restaurants/pho/" target="_blank" rel="noopener">DoorDash delivery</a></li>
+          <li><a href="https://www.instagram.com/doitpholove/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/doitpholove/" target="_blank" rel="noopener">Facebook</a> · TikTok</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Pho Love · Altoona, PA</span>
+      <span class="script" style="font-size:24px">Do it pho love <span class="heart">♥</span></span>
+    </div>
+  </div>
+</footer>
+
+<a class="mobilebar" href="#order"><svg class="ic"><use href="#ic-chop"/></svg> Order pickup</a>
+
+<script>
+  // Scroll reveal
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.14});
+    els.forEach(function(e){io.observe(e);});
+  })();
+  // Live open/closed status (Altoona is Eastern Time)
+  (function(){
+    var pill=document.getElementById('hoursPill'),txt=document.getElementById('hoursText');
+    if(!pill||!txt)return;
+    try{
+      var et=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+      var d=et.getDay(),h=et.getHours()+et.getMinutes()/60;
+      var weekend=(d===5||d===6),close=weekend?21:20,closeLabel=weekend?'9pm':'8pm';
+      if(h>=11&&h<close){txt.textContent='Open now · 11am–'+closeLabel+' today';}
+      else{pill.classList.add('closed');txt.textContent=(h<11?'Opens at 11am today':'Closed now · opens 11am');}
+    }catch(e){}
+  })();
+  // Close mobile nav on link tap
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});
+  });
+</script>
+</body>
+</html>
